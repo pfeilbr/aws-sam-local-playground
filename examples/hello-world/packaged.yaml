@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple Hello World Serverless project
+Resources:
+  HelloWorld:
+    Properties:
+      CodeUri: s3://sam-deploy-bucket-01/f3b219e0147787fd3b5c100c941bc5cf
+      Handler: index.handler
+      Runtime: nodejs6.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
