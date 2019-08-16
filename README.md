@@ -24,6 +24,13 @@ sam package --template-file template.yaml --s3-bucket sam-deploy-bucket-01 --out
 # deploy
 sam deploy --template-file packaged.yaml --stack-name sam-hello-world-v0 --capabilities CAPABILITY_IAM
 
+# invoke
+# NOTE: you'll need to lokup the "full" function name
+aws lambda invoke --function-name "sam-hello-world-v1-HelloWorld-L8DLT50DZNIJ" --payload '{"name": "brian"}' output.log; cat output.log
+
+# view logs
+sam logs -n HelloWorld --stack-name sam-hello-world-v1
+
 # ---
 
 # invoke lambda via api gateway example
