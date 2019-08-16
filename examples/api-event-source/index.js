@@ -5,6 +5,6 @@ exports.handler = async (event, context, callback) => {
 
   return {
     statusCode: 200,
-    body: "OK v1"
+    body: "OK v3"
   };
 };
