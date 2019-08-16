@@ -1,8 +1,8 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
+Description: 'An example RESTful service
 
-Description: |
-  An example RESTful service
+  '
 Resources:
   ExampleFunction:
     Type: AWS::Serverless::Function
@@ -15,3 +15,4 @@ Resources:
           Properties:
             Path: /
             Method: any
+      CodeUri: s3://sam-deploy-bucket-01/417ee156174c4a46eb52e95343545fb7
