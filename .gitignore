@@ -1,1 +1,3 @@
 output.log
+.aws-sam
+node_modules
